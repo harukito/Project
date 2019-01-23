@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BINDIR	Makefile	/^BINDIR = bin$/;"	m
+BINDIR	src/Makefile	/^BINDIR = ..\/bin$/;"	m
+CFLAGS	src/Makefile	/^CFLAGS = $(TYPE) -Wall -I..\/include\/ -L..\/lib\/ $/;"	m
+CPP	Makefile	/^CPP = g++$/;"	m
+CPP	src/Makefile	/^CPP = g++$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS = $(TYPE) -Wall -I.\/include\/ -L.\/lib\/  $/;"	m
+CPPFLAGS	src/Makefile	/^CPPFLAGS = $(TYPE) -Wall -I..\/include\/ -L..\/lib\/ $/;"	m
+CREATED_OBJECTS	Makefile	/^CREATED_OBJECTS = progressbar.o VariableByte.o$/;"	m
+DATADIR	Makefile	/^DATADIR = data$/;"	m
+DATADIR	src/Makefile	/^DATADIR = ..\/data$/;"	m
+LIBDIR	Makefile	/^LIBDIR = lib$/;"	m
+LIBDIR	src/Makefile	/^LIBDIR = ..\/lib$/;"	m
+OBJECTS	Makefile	/^OBJECTS = $(CREATED_OBJECTS) $/;"	m
+OBJECTS_LOC	Makefile	/^OBJECTS_LOC = $(OBJECTS:%.o=$(LIBDIR)\/%.o)$/;"	m
+SRCDIR	Makefile	/^SRCDIR = src$/;"	m
+SRCDIR	src/Makefile	/^SRCDIR = .\/$/;"	m
+TYPE	Makefile	/^TYPE ?= -O5$/;"	m
+TYPE	src/Makefile	/^TYPE ?= -O5$/;"	m
+VariableByte	include/VariableByte.h	/^class VariableByte{$/;"	c
+_PROGRESSBAR_H_	include/progressbar.h	2;"	d
+_VARIABLEBYTE_H_	include/VariableByte.h	2;"	d
+cols	include/progressbar.h	/^	int cols;$/;"	m	class:progressbar
+compress	src/VariableByte.cc	/^char *VariableByte::compress(unsigned int *data, int size){$/;"	f	class:VariableByte
+decompress	src/VariableByte.cc	/^unsigned int *VariableByte::decompress(char *cdata){$/;"	f	class:VariableByte
+empty	include/progressbar.h	/^	char empty;$/;"	m	class:progressbar
+end	include/progressbar.h	/^	char *end;$/;"	m	class:progressbar
+flag	include/progressbar.h	/^	char flag;$/;"	m	class:progressbar
+load	src/VariableByte.cc	/^void VariableByte::load(char *cbuffer, std::fstream file){$/;"	f	class:VariableByte
+main	src/float_generator.cpp	/^int main(int argc, char **argv){$/;"	f
+main	src/main.cpp	/^int main(int argc, char **argv){$/;"	f
+msg	include/progressbar.h	/^	char *msg;$/;"	m	class:progressbar
+percent	include/progressbar.h	/^	int percent;$/;"	m	class:progressbar
+print_help	src/float_generator.cpp	/^void print_help(char *name){$/;"	f
+progressbar	include/progressbar.h	/^class progressbar{$/;"	c
+progressbar	src/progressbar.cc	/^progressbar::progressbar(){$/;"	f	class:progressbar
+progressbar	src/progressbar.cc	/^progressbar::progressbar(int cols){$/;"	f	class:progressbar
+progressbar	src/progressbar.cc	/^progressbar::progressbar(int cols, const char *msg, const char *end, char flag, char empty){$/;"	f	class:progressbar
+refresh	src/progressbar.cc	/^bool progressbar::refresh(int new_percent){ $/;"	f	class:progressbar
+reset	src/progressbar.cc	/^bool progressbar::reset(){$/;"	f	class:progressbar
+save	src/VariableByte.cc	/^void VariableByte::save(char *cdata, std::fstream file){$/;"	f	class:VariableByte
+set_cols	src/progressbar.cc	/^bool progressbar::set_cols(int cols){$/;"	f	class:progressbar
+set_empty	src/progressbar.cc	/^bool progressbar::set_empty(char empty){$/;"	f	class:progressbar
+set_end	src/progressbar.cc	/^bool progressbar::set_end(const char *end){$/;"	f	class:progressbar
+set_flag	src/progressbar.cc	/^bool progressbar::set_flag(char flag){$/;"	f	class:progressbar
+set_msg	src/progressbar.cc	/^bool progressbar::set_msg(const char *msg){$/;"	f	class:progressbar
+start	src/progressbar.cc	/^bool progressbar::start(){$/;"	f	class:progressbar
+status	include/progressbar.h	/^	bool status;$/;"	m	class:progressbar
+stop	src/progressbar.cc	/^bool progressbar::stop(){$/;"	f	class:progressbar
+~progressbar	src/progressbar.cc	/^progressbar::~progressbar(){$/;"	f	class:progressbar

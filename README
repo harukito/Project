@@ -1,0 +1,91 @@
+
+ESTRUCTURA:
+Por legibilidad y orden este esqueleto tiene una serie de directorios y ar-
+chivos que le permitirán tener un proyecto correcto.
+
+DIRECTORIOS:
+-> bin: Aquí quedan alojados los programas compilados para ser ejecutados.
+        Esta carpeta solo la usa el programa make.
+
+-> data: Contiene dos carpetas, input y output. En input debería guardar los
+         archivos de entrada que requiere su programa. En output debe guar-
+         dar los archivos de resultados que genera su programa. Esto siempre
+         que su programa use archivos.
+
+-> doc: Esta es la carpeta donde se guarda la documentación del proyecto,
+        por ejemplo, manuales, apis, observaciones, versiones, etc.
+
+-> include: Esta carpeta aloja todos los archivos de cabecera del proyecto
+            (.h). Para incluir en un código alguna cabecera de esta carpeta
+            realícelo de la forma tradicional (#include<mi_cabecera.h>).
+
+-> lib: En esta carpeta make guarda los archivos de compilación intermedio
+        como las compilaciones de bibliotecas estáticas (.o).
+
+-> script: Si su programa requiere una forma especial de arranque, por ejem-
+           plo el seteo de variables del sistema, una linea de comandos es-
+           pecial, rutas de uso particulares, etc., recomiendo el uso de 
+           algun lenguaje script para lanzar el programa (bash, perl, etc.).
+
+-> src: Directorio principal de trabajo, donde se alojaran todos sus progra-
+        mas (.c, .cpp, .cc, etc.).
+
+ARCHIVOS:
+-> README: Este archivo, usualmente los archivos README en proyectos reales
+           son utilizados para hablar de las dependencias que requiere un 
+           programa y su forma de compilación y uso.
+
+-> Makefile: Archivo de órdenes de compilación para el programa make.
+
+-> src/Makefile: Archivo de órdenes de compilación específicas para la car-
+                 peta src (no tocar).
+
+USO DEL ARCHIVO Makefile:
+El archivo Makefile del directorio raiz es el usted debe usar para compilar.
+Este archivo asume que usted sigue el orden de directorios antes explicado,
+es decir va a buscar las cabeceras en la carpeta include y los archivos fuen-
+te a la carpeta src. Para añadir nuevas librerías a su proyecto estas deben
+ser agregadas en la linea respectiva separadas por espacio:
+
+CREATED_OBJECTS = libreria1.o libreria2.o libreria3.o
+
+Por defecto este guión de compilación usa optimización de código "O5", si 
+quieres cambiarlo o agregar por ejemplo soporte para debugeo existen dos
+formas de hacerlo.
+
+Editar directamente el archivo: reemplazar por la opción requerida en la 
+                                linea:
+
+TYPE ?= -opcion
+
+Setear la variable de entorno: de forma no-permanente se puede setear la va-
+                               riable de entorno TYPE en consola y solo será
+                               valida mientras se mantenga abierta la conso-
+                               la donde se seteo. Para esto, en consola es-
+                               cribir:
+
+export TYPE=-opcion
+
+                               Para volver a la opción por defecto, cerrar 
+                               la consola actual o escribir en consola:
+
+unset TYPE
+
+COMPILAR:
+Para compilar escriba en consola:
+
+make nombre_programa_sin_extencion
+
+Para borrar los archivos generados por la compilación (carpetas bin y lib)
+usar el comando:
+
+make clean
+
+Para compilar solo una libreria en particular (.o) ejecutar en consola la 
+orden:
+
+make libreria.o
+
+Esto solo compila la librería y la guarda en la carpeta lib.
+
+
